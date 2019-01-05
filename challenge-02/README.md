@@ -22,13 +22,17 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function mudaC(x){
+  c = x;
+  return "O valor da variavel agora é " + c;
+}
 
 // Invoque a função criada acima.
-?
+mudaC(13);
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/*O valor da variavel agora é 13
+*/
 
 /*
 Crie uma função com as seguintes características:
@@ -37,19 +41,25 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function conta(x, y, z){
+  if(x === undefined || y === undefined || z === undefined){
+    return "Preencha todos os valores corretamente!";
+  }else{
+    return (y*x*z)+2;
+  }
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+conta(1,2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// "Preencha todos os valores corretamente!"
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+conta(1,2,3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+//8
 
 /*
 Crie uma função com as seguintes características:
@@ -60,8 +70,29 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function condicao(a, b , c){
+  if(a != undefined && b == undefined && c == undefined){
+    return a;
+  }else if(a != undefined && b != undefined && c == undefined){
+    return a + b;
+  }else if(a != undefined && b != undefined && c != undefined){
+    return (a + b)/c;
+  }else if(a == undefined && b == undefined && c == undefined){
+    return false;
+  }else{
+    return null;
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 ?
 ```
+condicao(); //false
+
+condicao(1); //1
+
+condicao(1, 2);//3
+
+condicao(1, 2, 2);//1.5
+
+condicao(1, undefined, 2); //null
